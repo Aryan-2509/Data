@@ -1,0 +1,116 @@
+
+    {
+        "_id": "5bebbe60e4b028bf8763f8ed",
+        "processDefinitionId": "9254d48a-5cdd-48d5-9958-b2a9ef85fe81",
+        "version": 1,
+        "name": "task due date check",
+        "description": "Process Description",
+        "process": {
+          "_id": "process_94a396b4-da8e-48c0-9faf-b0854bf45107",
+          "processElements": [
+            {
+              "_id": "node-474d9964-ae92-48ad-92cd-db5717c2999f",
+              "eventDefinition": {
+                "type": "NONE",
+                "_class": "com.spr.pe.model.event.definition.NoneEventDefinition"
+              },
+              "type": "START_EVENT",
+              "settings": {},
+              "_class": "com.spr.pe.model.event.StartEvent"
+            },
+            {
+              "_id": "node-0f2d759f-b90f-4e3e-86e7-8333213e6226",
+              "taskType": "Design Task",
+              "assetField": "ASSET_ID",
+              "taskTitle": "u1",
+              "dueDate": {
+                "formatType": "ISO8601",
+                "dueDate": "P1D",
+                "field": "ASSET_ID.LAUNCH_DATE",
+                "before": false
+              },
+              "closeCompletedTask": false,
+              "autoClose": false,
+              "queueIds": [],
+              "customProperties": {},
+              "subscribers": [
+                {
+                  "shareLevel": "USER_GROUP",
+                  "sharedWithIds": []
+                },
+                {
+                  "shareLevel": "USER",
+                  "sharedWithIds": []
+                }
+              ],
+              "name": "u1",
+              "type": "USER_ACTIVITY",
+              "settings": {
+                "spr_task_type": "Design Task"
+              },
+              "_class": "com.spr.pe.model.activity.UserActivity"
+            },
+            {
+              "_id": "node-386d0784-285e-41c9-a2d5-e9acb78c01d2",
+              "eventDefinition": {
+                "type": "NONE",
+                "_class": "com.spr.pe.model.event.definition.NoneEventDefinition"
+              },
+              "type": "END_EVENT",
+              "settings": {},
+              "_class": "com.spr.pe.model.event.EndEvent"
+            },
+            {
+              "_id": "cfd05cad-3bf0-4deb-90d1-0dd143f47c34",
+              "sourceActivityId": "node-474d9964-ae92-48ad-92cd-db5717c2999f",
+              "targetActivityId": "node-0f2d759f-b90f-4e3e-86e7-8333213e6226",
+              "defaultSequence": false,
+              "name": "",
+              "type": "SEQUENCE_FLOW",
+              "settings": {},
+              "_class": "com.spr.pe.model.SequenceFlow"
+            },
+            {
+              "_id": "c6dfdaf6-810a-4e82-8790-7872d8b33150",
+              "sourceActivityId": "node-0f2d759f-b90f-4e3e-86e7-8333213e6226",
+              "targetActivityId": "node-386d0784-285e-41c9-a2d5-e9acb78c01d2",
+              "defaultSequence": false,
+              "name": "",
+              "type": "SEQUENCE_FLOW",
+              "settings": {},
+              "_class": "com.spr.pe.model.SequenceFlow"
+            }
+          ],
+          "name": "Untitled Process",
+          "type": "MAIN_PROCESS"
+        },
+        "inputForm": {
+          "repeatable": false,
+          "minCount": 1,
+          "maxCount": 2147483647,
+          "fields": [
+            {
+              "_id": "UNIVERSAL_CASE",
+              "fieldName": "UNIVERSAL_CASE",
+              "entityDefinitionId": "UNIVERSAL_CASE",
+              "lookupType": "UNIVERSAL_CASE",
+              "parentChild": false,
+              "standardAttribute": false,
+              "multivalued": false,
+              "auditable": false,
+              "searchable": false,
+              "sortable": false,
+              "reportable": false,
+              "cardinality": false,
+              "asDashboardFilter": false,
+              "mask": false,
+              "mandatory": false,
+              "deleted": false,
+              "permissionTypes": []
+            }
+          ]
+        },
+        "unDeployed": true,
+        "_class": "com.spr.pe.core.execution.DeployedProcessDefinition",
+        "pollExpiryTime": 1405362600000.0
+    }
