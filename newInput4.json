@@ -1,0 +1,7 @@
+{
+    "fieldName" : "book",
+    "fieldType" : "List<String>",
+    "isList" : true,
+    "list" : ["Ajay","Rohit","Akshay"]
+}
+
