@@ -1,0 +1,6 @@
+{
+    "fieldName" : "book",
+    "fieldType" : "book",
+    "class" : "com.example.MongoAnalysisApi.Book"
+}
+
