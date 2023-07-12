@@ -1,0 +1,6 @@
+{
+    "url" : "https://raw.githubusercontent.com/Aryan-2509/Data/master/sprinklr.employee8.json",
+    "indexArray" : ["isRead","senderId"],
+    "numOfDocs" : 5000000,
+    "permutation" : false
+}
